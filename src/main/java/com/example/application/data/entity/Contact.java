@@ -1,18 +1,15 @@
 package com.example.application.data.entity;
 
-//import com.example.application.data.AbstractEntity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-//import jakarta.persistence.Entity;
-//import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
-//@Entity
+@Entity
 public class Contact extends AbstractEntity {
-//    @Id
     @NotEmpty
     private String firstName = "";
 
@@ -23,16 +20,11 @@ public class Contact extends AbstractEntity {
     @JoinColumn(name = "company_id")
     @NotNull //    @NotEmpty
     @JsonIgnoreProperties({"employees"})
-    private  Company company;
-
-    /**
-     *      @NotNull    - do combobox, żeby wybrać jakąś opcję
-     *      @NotEmpty   - do textfieldów, żeby wpisać jakąś wartość
-     */
+    private Company company = null;
 
     @NotNull//    @NotEmpty
     @ManyToOne
-    private Status status;
+    private Status status = null;
 
     @Email
     @NotEmpty
@@ -40,7 +32,7 @@ public class Contact extends AbstractEntity {
 
     @Override
     public String toString() {
-        return firstName+" "+lastName;
+        return firstName + " " + lastName;
     }
 
     public String getFirstName() {
