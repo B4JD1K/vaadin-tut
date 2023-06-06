@@ -39,10 +39,15 @@ public class MainLayout extends AppLayout {
 
     // ponizej robimy menu nawigacyjne z kolejnymi podstronami ktore beda sie otwierac
     private void createDrawer() {
-        RouterLink listView = new RouterLink("List", ListView.class);
+        RouterLink listView = new RouterLink("Listaaa", ListView.class);
         listView.setHighlightCondition(HighlightConditions.sameLocation());
+
+        RouterLink dashboardView = new RouterLink("DASZBORD", DashboardView.class);
+        dashboardView.setHighlightCondition(HighlightConditions.sameLocation());
+
         addToDrawer(new VerticalLayout(
-                listView
+                listView,
+                dashboardView
         ));
     }
 }
