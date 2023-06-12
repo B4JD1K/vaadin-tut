@@ -27,7 +27,7 @@ public class ContactForm extends FormLayout {
 
     // formularz
 //    Label title = new Label("Contact form");
-    TextField firstName = new TextField("First name");
+    public TextField firstName = new TextField("First name");
     TextField lastName = new TextField("Last name");
     EmailField email = new EmailField("Email");
     ComboBox<Status> status = new ComboBox<>("Status");
