@@ -1,4 +1,4 @@
-package com.example.application.views;
+package com.example.application.views.list;
 
 import com.example.application.data.service.CrmService;
 import com.vaadin.flow.component.Component;
@@ -10,7 +10,6 @@ import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 import jakarta.annotation.security.PermitAll;
 
 @Route(value = "dashboard", layout = MainLayout.class)

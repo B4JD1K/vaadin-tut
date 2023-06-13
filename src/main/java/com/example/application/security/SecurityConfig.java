@@ -1,6 +1,6 @@
 package com.example.application.security;
 
-import com.example.application.views.LoginView;
+import com.example.application.views.list.LoginView;
 import com.vaadin.flow.spring.security.VaadinWebSecurity;
 //import com.vaadin.flow.spring.security.VaadinWebSecurityConfigurerAdapter;
 import org.springframework.context.annotation.Bean;
